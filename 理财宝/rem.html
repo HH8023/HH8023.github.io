@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>rem</title>
+		
+		<style>
+			html{
+				font-size:62.5%;
+				/*计算方便   16px  100%  10px  62.5%*/
+				/*1rem  = 10px 2rem=20px*/
+				/*正常开发 是px em 和rem结合使用*/
+			}
+			
+			.px{
+				font-size: 16px;	
+			}
+			.px p{
+				font-size: 16px;
+			}
+			.sub-px{
+				font-size: 80%;
+			}
+			.sub-px p{
+				font-size: 12px;
+			}
+			
+			.em p{
+				font-size: 1em;
+			}
+			.sub-em{
+				font-size: 80%;
+			}
+			.sub-em p{
+				/*16px * 0.8*/
+				font-size: 1em;
+			}
+			
+			
+			.rem p{
+				font-size: 1rem;
+			}
+			.sub-rem{
+				font-size: 80%;
+			}
+			.sub-rem p{
+				font-size: 1rem;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			px 像素  固定单位，不会因为页面变化而变化
+			
+			em  相对单位   参考物父级元素，具有继承的特点，
+			如果父元素没有font-size，他就会向上继续查找父父元素，直到找到html的font-size
+			缺点：混乱
+		
+			rem 相对单位   参考物是根节点html元素
+		-->
+		
+		<div class="px">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fugiat animi eum commodi error omnis blanditiis rem sequi modi hic soluta eaque vitae. Tempora ab beatae corporis repellendus at numquam reiciendis amet voluptates minus nobis neque saepe alias vero enim odio dolores incidunt in deserunt facere nemo! Eum repudiandae voluptatem odit rerum provident! Magni voluptate facilis alias rem minus necessitatibus dolore possimus quia facere omnis blanditiis quisquam voluptatibus voluptatum eius et corporis nemo neque fuga sed doloribus fugiat voluptatem maiores perspiciatis delectus deserunt recusandae enim unde aliquid molestiae in quae aperiam incidunt consequatur! Eius dicta repellat laborum totam rerum? Sed culpa obcaecati fuga dignissimos praesentium ipsam quisquam sequi. Dolores odit perferendis eligendi quidem commodi voluptates explicabo quae nulla est qui! Voluptas similique excepturi praesentium atque explicabo neque ut maiores sed quae eligendi libero harum assumenda blanditiis? Deleniti minima corporis unde quam velit vero placeat maiores quo laboriosam iure molestiae doloribus ratione. Asperiores nulla officia illo odit nisi hic nihil officiis architecto optio eligendi? Enim repudiandae alias corporis sed ipsa! Ullam magnam harum fugit est eum excepturi minus. Earum ipsa cum cumque vitae magni optio nobis! Blanditiis saepe suscipit hic dicta cum nihil inventore magni enim iusto nobis dolore error illum.</p>
+			<div class="sub-px">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi est sit voluptates similique reprehenderit laborum inventore amet itaque commodi quia?</p>
+			</div>
+		</div>
+		<hr />
+		
+		<div class="em">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fugiat animi eum commodi error omnis blanditiis rem sequi modi hic soluta eaque vitae. Tempora ab beatae corporis repellendus at numquam reiciendis amet voluptates minus nobis neque saepe alias vero enim odio dolores incidunt in deserunt facere nemo! Eum repudiandae voluptatem odit rerum provident! Magni voluptate facilis alias rem minus necessitatibus dolore possimus quia facere omnis blanditiis quisquam voluptatibus voluptatum eius et corporis nemo neque fuga sed doloribus fugiat voluptatem maiores perspiciatis delectus deserunt recusandae enim unde aliquid molestiae in quae aperiam incidunt consequatur! Eius dicta repellat laborum totam rerum? Sed culpa obcaecati fuga dignissimos praesentium ipsam quisquam sequi. Dolores odit perferendis eligendi quidem commodi voluptates explicabo quae nulla est qui! Voluptas similique excepturi praesentium atque explicabo neque ut maiores sed quae eligendi libero harum assumenda blanditiis? Deleniti minima corporis unde quam velit vero placeat maiores quo laboriosam iure molestiae doloribus ratione. Asperiores nulla officia illo odit nisi hic nihil officiis architecto optio eligendi? Enim repudiandae alias corporis sed ipsa! Ullam magnam harum fugit est eum excepturi minus. Earum ipsa cum cumque vitae magni optio nobis! Blanditiis saepe suscipit hic dicta cum nihil inventore magni enim iusto nobis dolore error illum.</p>
+			<div class="sub-em">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi est sit voluptates similique reprehenderit laborum inventore amet itaque commodi quia?</p>
+			</div>
+		</div>
+		<hr />
+		
+		<div class="rem">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fugiat animi eum commodi error omnis blanditiis rem sequi modi hic soluta eaque vitae. Tempora ab beatae corporis repellendus at numquam reiciendis amet voluptates minus nobis neque saepe alias vero enim odio dolores incidunt in deserunt facere nemo! Eum repudiandae voluptatem odit rerum provident! Magni voluptate facilis alias rem minus necessitatibus dolore possimus quia facere omnis blanditiis quisquam voluptatibus voluptatum eius et corporis nemo neque fuga sed doloribus fugiat voluptatem maiores perspiciatis delectus deserunt recusandae enim unde aliquid molestiae in quae aperiam incidunt consequatur! Eius dicta repellat laborum totam rerum? Sed culpa obcaecati fuga dignissimos praesentium ipsam quisquam sequi. Dolores odit perferendis eligendi quidem commodi voluptates explicabo quae nulla est qui! Voluptas similique excepturi praesentium atque explicabo neque ut maiores sed quae eligendi libero harum assumenda blanditiis? Deleniti minima corporis unde quam velit vero placeat maiores quo laboriosam iure molestiae doloribus ratione. Asperiores nulla officia illo odit nisi hic nihil officiis architecto optio eligendi? Enim repudiandae alias corporis sed ipsa! Ullam magnam harum fugit est eum excepturi minus. Earum ipsa cum cumque vitae magni optio nobis! Blanditiis saepe suscipit hic dicta cum nihil inventore magni enim iusto nobis dolore error illum.</p>
+			<div class="sub-rem">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi est sit voluptates similique reprehenderit laborum inventore amet itaque commodi quia?</p>
+			</div>
+		</div>
+		<hr />
+		
+		
+	</body>
+</html>

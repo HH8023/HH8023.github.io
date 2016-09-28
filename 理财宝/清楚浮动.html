@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		/*float  父元素高度塌陷*/
+			h1,p{
+				float: left;
+				/*浮云*/
+			}
+			div{
+				/*overflow: hidden;*/
+				/*auto*/
+				/*float: left;*/
+				/*position: absolute;*/
+				display: table-cell;
+				display: table-caption;
+			}
+			
+			div:after{
+				/*n内容是空*/
+				content: '.';
+				/*让他不可见*/
+				height: 0;
+				/*会计标签*/
+				display: block;
+				/*清除浮动*/
+				clear: both;
+				/*和第一种方式的原理是一样的*/
+				visibility: hidden;
+				
+				/*清楚浮动  --- 只触发bfc  block format context就可以清除浮动*/
+			}
+			
+			/*尼古拉斯*/
+			/*防止浏览器顶部崩溃*/
+			/*div:before,
+			div:after{
+				content: '.';
+				display: table;
+				height: 0;
+			}
+			div:after{
+				clear: both;
+			}*/
+		</style>
+	</head>
+	<body>
+		
+		<div style="background-color: gray;">
+			<h1>Lorem ipsum dolor sit amet.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque veniam commodi laborum facere amet sequi ad natus voluptates blanditiis reiciendis et distinctio molestiae nesciunt aut earum sunt id laboriosam cum. Quasi explicabo voluptas molestias minima dolorem repellat voluptatum ex similique vel tempore quidem ratione voluptatibus illum ea consectetur ducimus aliquid.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse alias corporis laboriosam maiores similique natus neque dolorem amet id cupiditate nihil reprehenderit minima quasi sint necessitatibus ipsam quisquam. Laboriosam asperiores molestias at hic cumque accusantium facilis corrupti iure veniam doloribus adipisci itaque voluptatibus impedit sunt culpa expedita quia in amet.</p>
+		
+			<!--缺点  会添加一个无意义的标签，结构与表现分离的web标准-->
+			<!--<div style="clear:both"></div>-->
+		</div>
+		
+	</body>
+</html>
